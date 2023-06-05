@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cabinet_wawaku</title>
+    <!-- tailwind css file -->
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="/cab_wa.css">
+    <!-- google file -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- fontawesome script -->
+    <script src="https://kit.fontawesome.com/25e32fa677.js" crossorigin="anonymous"></script>
+    <!-- Swipper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <!-- script send message -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("Ffh04ZzCUlWgXjS9Z");
+        })();
+    </script>
+
+
+
+</head>
+<body class="bg-[#f8fafc] min-h-screen">
+    <header class="sticky top-0 z-40">
+        <nav class="sticky top-0 z-40 flex items-center justify-between w-full h-24 px-4 bg-white shadow-lg desktop md:px-10 lg:px-10">
+            <div>
+                <a class="flex items-center gap-2 cursor-pointer" href="index.html">
+                    <img src="./photos/Logo CabWa.docx - Word 24_03_2023 11_54_52 (2).png" width="70px" height="70px" alt="logo">
+                    <h1 class="font-bold text-xl font-['Cormorant'] lg:text-3xl">WAWAKU NSITU ZOLA</h1>
+                </a>
+            </div>
+            <div class="">
+                <ul class="flex items-center hidden gap-6 text-xs font-bold list-none cursor-pointer lg:flex">
+                    <li>
+                        <a href="index.html" class="px-2 hover:p-2 hover:bg-amber-300 hover:rounded-md lg:text-lg">Le Cabinet</a>
+                    </li>
+                    <li class="relative px-2 group hover:p-2 hover:bg-amber-300 hover:rounded-md lg:text-lg">
+                        <button class="flex items-center gap-2 px-2">
+                            <span>Expertises</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="absolute invisible w-48 px-2 transition-all duration-300 transform opacity-0 top-full group-focus-within:visible group-focus-within:opacity-100">
+                            <ul class="py-4 mt-1 space-y-3 border rounded-md shadow border-neutral-50 bg-white/50 backdrop-blur-sm">
+                                <li>
+                                    <a href="droit_affaires.html" target="_self" class="px-3 py-1 text-sm hover:bg-amber-300 hover:rounded-lg">Droit des Affaires</a>
+                                </li>
+                                <li>
+                                    <a href="droit_biens.html" target="_self" class="px-3 py-1 text-sm hover:bg-amber-300 hover:rounded-lg">Droit des Biens</a>
+                                </li>
+                                <li>
+                                    <a href="droit_obligations.html" target="_self" class="px-3 py-1 text-sm hover:bg-amber-300 hover:rounded-lg">Droit des Obligations</a>
+                                </li>
+                                <li>
+                                    <a href="droit_pénal.html" target="_self" class="px-3 py-1 text-sm hover:bg-amber-300 hover:rounded-lg">Droit Pénal</a>
+                                </li>
+                                <li>
+                                    <a href="droit_travail.html" target="_self" class="px-3 py-1 text-sm hover:bg-amber-300 hover:rounded-lg">Droit du Travail</a>
+                                </li>
+                                <li>
+                                    <a href="droit_successions.html" target="_self" class="px-3 py-1 text-sm hover:bg-amber-300 hover:rounded-lg">Droit des Successions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="active:underline">
+                        <a href="testimony.html" class="px-2 hover:p-2 hover:bg-amber-300 hover:rounded-md lg:text-lg">Témoignage</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="px-2 hover:p-2 hover:bg-amber-300 hover:rounded-md lg:text-lg">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="flex items-center hidden gap-2 p-2 text-sm font-semibold duration-1000 rounded-full shadow-md md:flex bg-amber-300 hover:scale-110">
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span>
+                        +32.66.66.77.88.99
+                    </span>
+                </button>
+                <button type="button" onclick="navFunc()" class="nav-button">
+                    <span class="sr-only"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile">
+            <ul class="flex flex-col items-center justify-center w-full h-full gap-6 text-xl font-bold list-none cursor-pointer bg-white/50 backdrop-blur-md md:text-lg lg:hidden">
+                <li class="py-2 px-2 hover:p-2 hover:bg-[#fde68a] hover:rounded-md">
+                    <a href="index.html">Le Cabinet</a>
+                </li>
+                <li class="group relative hover:p-2 hover:bg-[#fde68a] hover:rounded-md px-2">
+                    <button class="flex items-center gap-2">
+                        <span>Expertises</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="absolute invisible transition-all duration-300 transform opacity-0 w-52 top-full group-focus-within:visible group-focus-within:opacity-100">
+                        <ul class="px-2 py-4 mt-1 space-y-3 text-xs border rounded-md shadow border-neutral-50 bg-amber-50 backdrop-blur-sm">
+                            <li>
+                                <a href="droit_affaires.html" target="_self" class="px-3 py-1 text-sm hover:bg-[#fde68a] hover:rounded-lg">Droit des Affaires</a>
+                            </li>
+                            <li>
+                                <a href="droit_biens.html" target="_self" class="px-3 py-1 text-sm hover:bg-[#fde68a] hover:rounded-lg">Droit des Biens</a>
+                            </li>
+                            <li>
+                                <a href="droit_obligations.html" target="_self" class="px-3 py-1 text-sm hover:bg-[#fde68a] hover:rounded-lg">Droit des Obligations</a>
+                            </li>
+                            <li>
+                                <a href="droit_pénal.html" target="_self" class="px-3 py-1 text-sm hover:bg-[#fde68a] hover:rounded-lg">Droit Pénal</a>
+                            </li>
+                            <li>
+                                <a href="droit_travail.html" target="_self" class="px-3 py-1 text-sm hover:bg-[#fde68a] hover:rounded-lg">Droit du Travail</a>
+                            </li>
+                            <li>
+                                <a href="droit_successions.html" target="_self" class="px-3 py-1 text-sm hover:bg-[#fde68a] hover:rounded-lg">Droit des Successions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="py-2 px-2 hover:p-2 hover:bg-[#fde68a] hover:rounded-md">
+                    <a href="testimony.html">Témoignage</a>
+                </li>
+                <li class="py-2 px-2 hover:p-2 hover:bg-[#fde68a] hover:rounded-md">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <button class="md:hidden flex gap-2 items-center mt-4 px-4 py-2 bg-[#fde68a] rounded-full text-xl font-semibold shadow-md hover:scale-110 duration-1000">
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span>
+                        +32.66.66.77.88.99
+                    </span>
+                </button>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="flex flex-col items-center justify-center w-full min-h-screen bg-white contact-section">
+            <div class="flex items-center justify-center w-full h-24 mb-10 lg:h-48 bg-amber-400">
+                <h3 class="text-3xl font-bold text-white lg:text-5xl">Contact</h3>
+            </div>
+            <div class="container grid place-items-center w-full md:w-full lg:w-[90vw] gap-3 md:gap-6 mb-1 md:px-20 lg:mb-10 md:mb-10 rounded-md min-h-screen">
+                <div class="map w-full lg:w-full h-auto md:h-auto rounded-md shadow-lg md:w-full lg:h-[400px]">
+                    <a href="https://goo.gl/maps/m8o4FS3NgHkbbYuB8" target="_blank">
+                        <div class="relative">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.0132682736653!2d15.3727854!3d-4.4086149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3825420b9a67%3A0xebb14d52711efea2!2sRue%20Nguma%2C%20Kinshasa%2C%20R%C3%A9publique%20d%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2sfr!4v1681419893988!5m2!1sfr!2sfr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </a>
+    
+                </div>
+                <div class="container0-form bg-black flex lg:flex-row flex-col items-center justify-center md:justify-between lg:justify-between gap-2 md:gap-3 text-white w-full md:w-full lg:w-full h-auto md:h-[75vh] lg:h-auto p-6 rounded-md">
+                    <!-- contact-info -->
+                    <div class="grid w-full h-full p-2 gap-[1rem] lg:gap-[2rem] py-[2em] px-[1em] md:w-full lg:w-1/2 info-container">
+                        <div class="title">
+                            <h3 class="text-[1.5rem] md:text-[2.5rem] lg:text-[3rem] font-bold tracking-wide pb-[0.1em]">Contact us</h3>
+                            <p class="pt-2 font-medium text-[0.8rem] lg:text-[1.2rem]">Nous somme disponible pour vous offrir un service de qualité.</p>
+                        </div>
+                        <div class="grid place-items-start gap-[0.8rem] adress text-md lg:text-[1.2rem]">
+                            <div class="space-x-2 number">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+(243)790989000</span>
+                            </div>
+                            <div class="space-x-2 adress-mail">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>spencerm365@outlook.fr</span>
+                            </div>
+                            <div class="space-x-2 main-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>
+                                    25 Rue Francois Mitterand 9000 Montréal Canada
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 font-medium cursor-pointer social media text-md lg:text-[1.5rem]">
+                            <i class="fa-brands fa-youtube hover:duration-500 hover:scale-125 hover:text-[#FF0000]"></i>
+                            <i class="fa-brands fa-twitter hover:duration-500 hover:scale-125 hover:text-[#1DA1F2]"></i>
+                            <i class="fa-brands fa-facebook hover:duration-500 hover:scale-125 hover:text-[#1877F2]"></i>
+                            <i class="fa-brands fa-whatsapp hover:duration-500 hover:scale-125 hover:text-[#25D366]"></i>
+                        </div>
+                    </div>
+                    <!-- contact form -->
+                    <div class="relative w-full h-full py-0 md:w-full lg:w-1/2 form-container z-10 px-[1rem] overflow-hidden">
+                        <div class="design">
+                            <div class="hidden md:flex absolute z-[-10] w-40 h-40 bg-gray-400 rounded-full design-right -right-20 -top-20"></div>
+                            <div class="hidden md:flex absolute z-[-10] w-40 h-40 bg-gray-400 rounded-full design-left -left-20 -bottom-20"></div>
+                        </div>
+                        <div class="p-6 text-gray-800 bg-white shadow-lg form-main rounded-xl">
+                            <form action="" class="grid gap-[0.8rem]  md:gap-[1.5rem]">
+                                <!-- Prénom -->
+                                <div>
+                                    <input type="text" name="Prénom" placeholder="Prénom"
+                                id="prenom"
+                                class="w-full px-4 py-2 rounded-md outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-[#D1D5DB]-300 cursor-pointer text-[#777]">
+                                </div>
+                                <!-- Noms -->
+                                <div class="form-control">
+                                    <input type="text" name="noms" placeholder="Noms*"
+                                id="noms"
+                                onkeyup="validateNom()"
+                                class="w-full px-4 py-2 rounded-md outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-[#D1D5DB]-300 cursor-pointer text-[#777]">
+                                <small id="nom-error"></small>
+                                </div>
+                                <!-- Sujet -->
+                                <div class="form-control">
+                                    <input type="text" name="sujet" placeholder="Sujet*"
+                                    id="sujet"
+                                    onkeyup="validateSujet()"
+                                    class="w-full px-4 py-2 rounded-md outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-[#D1D5DB]-300 cursor-pointer text-[#777]">
+                                    <small id="sujet-error"></small>
+                                </div>
+                                <!-- email -->
+                                <div class="form-control">
+                                    <input type="email" name="email"
+                                    id="email"
+                                    onkeyup="validateEmail()" placeholder="Email*" class="w-full px-4 py-2 rounded-md outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-[#D1D5DB]-300 cursor-pointer text-[#777]">
+                                    <small id="email-error"></small>
+                                </div>
+                                <!-- message -->
+                                <div class="form-control">
+                                    <textarea rows="4" cols="20" placeholder="Message*"
+                                    id="message"
+                                    onkeyup="validateMessage()"
+                                    class="w-full px-4 py-2 rounded-md outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-[#D1D5DB]-300 cursor-pointer text-[#777]"></textarea>
+                                    <small id="message-error"></small>
+                                </div>
+                                <div class="control-submit">
+                                    <button id="submit-btn" type="button"
+                                    onclick="return validateForm()"
+                                    class="w-full py-2 text-sm text-white uppercase duration-500 rounded bg-black/50 hover:bg-black">Envoyez</button>
+                                    <small class="submit-error"></small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="success-msg">
+                <img src="/public/photos/Check_green.png" alt="">
+                <h2>Thank you Spencer!</h2>
+                <p>Your Message has been successfully submitted. Thanks!</p>
+                <button type="button" onclick="closePopup()">Ok</button>
+            </div>
+        </section>
+    </main>
+    <footer class="relative w-full h-auto bg-black max-w-screen">
+        <div class="flex flex-col items-center justify-center px-10 py-4 bg-gray-800 social-media md:flex-row md:items-center md:justify-between">
+            <div>
+                <p class="text-white text-md">2023 © Spencer NSITU ZOLA</p>
+            </div>
+            <div class="inline-flex gap-x-3">
+                <a href="" class="text-xl text-white duration-300 hover:scale-125">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="" class="text-xl text-white duration-300 hover:scale-125">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="" class="text-xl text-white duration-300 hover:scale-125">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="" class="text-xl text-white duration-300 hover:scale-125">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-4 px-12 md:grid-cols-2 place-items-center lg:grid-cols-4">
+            <div class="flex flex-col gap-6 px-2 py-4 text-white">
+                <ul class="">
+                    <h3 class="mb-4 text-2xl text-bold">WAWAKU NSITU ZOLA</h3>
+                    <li>
+                        <p class="text-xs italic text-semibold">
+                            Avec notre expertise, notre engagement envers chaque cas et notre approche personnalisée, vous pouvez être assuré que nous travaillerons avec acharnement pour protéger vos droits.
+                        </p>
+                    </li>
+                </ul>
+                <div class="">
+                    <img class="h-40 rounded-lg w-60" src="https://cdn.pixabay.com/photo/2022/01/05/08/09/law-6916588_640.jpg" alt="logo">
+                </div>
+            </div>
+            <div class="px-2 py-4 text-white">
+                <ul class="space-y-2 cursor-pointer">
+                    <h3 class="mb-4 text-2xl text-bold">Expertises</h3>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="px-2 py-4 text-white">
+                <ul class="space-y-2 cursor-pointer">
+                    <h3 class="mb-4 text-2xl text-bold">Services</h3>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">Droit Pénal</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="px-2 py-4 text-white">
+                <ul class="space-y-2 cursor-pointer">
+                    <h3 class="mb-4 text-2xl text-bold">Contact</h3>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-amber-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                            </span>
+                            <span class="text-xs duration-300 hover:underline">+243 81 812 35 64</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-xs duration-300 hover:underline">spencerm365@outlook.fr</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-xs duration-300 hover:underline">38 Rue Nguma, <br>
+                            Quartier 5, N'djili <br>
+                            Kinshasa - <br>
+                            Rép. Dém. du Congo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex gap-2 duration-300 hover:translate-x-1" href="http://">
+                            <span class="text-xs duration-300 hover:underline">Mardi-Vendredi : <br>
+                            08h00 - 20h00</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="">
+            <a class="absolute cursor-pointer right-4 bottom-4" href="#top">
+                <i class="sticky w-12 h-12 p-2 rounded-full left-1/2 top-1/2 fa-solid fa-chevron-up bg-amber-300"></i>
+            </a>              
+        </div>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>
