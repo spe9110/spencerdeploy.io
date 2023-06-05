@@ -1,0 +1,26 @@
+{
+  "name": "cabinet_wawaku",
+  "version": "1.0.0",
+  "description": "Cabinet WAWAKU",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss tailwind.css -o ./public/css/styles.css --watch --verbose",
+    "build": "cross-env NODE_ENV=production postcss tailwind.css -o ./public/css/styles.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
+    "gh-pages": "^5.0.0",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "win-node-env": "^0.6.1"
+  }
+}

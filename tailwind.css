@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth
+    }
+}
+@layer components {
+    .contactez {
+        @apply h-[60vh] md:h-[35vh] py-12 lg:h-[60vh] bg-amber-300 px-6 
+    }
+}
