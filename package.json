@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "postcss tailwind.css -o ./public/css/styles.css --watch --verbose",
     "build": "cross-env NODE_ENV=production postcss tailwind.css -o ./public/css/styles.css",
-    "predeploy": "npm run build",
+    "predeploy": "npm run dev",
     "deploy": "gh-pages -d public"
   },
   "keywords": [],
